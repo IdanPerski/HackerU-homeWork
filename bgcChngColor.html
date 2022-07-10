@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        form {
+            width: 50vw;
+            height: 20vh;
+            margin: 55px auto;
+            background-color: rgb(72, 65, 125);
+            border: solid;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow: 3px 3px 5px;
+
+        }
+
+        .btn {
+            height: 40px;
+            width: 25%;
+            margin: 15px;
+            font-size: 1rem;
+            text-align: center;
+            background-color: #699;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(62, 45, 81);
+            color: bisque;
+        }
+
+        input {
+            height: 40px;
+            width: 40%;
+            border: solid;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="myform">
+
+        <input type="text" name="textInput">
+
+        <input class="btn" type="button" value="Chnage Color" onclick="chngColor()"></input>
+
+    </form>
+
+    <script>
+
+
+        function chngColor() {
+            var newColor = document.myform.textInput.value
+            document.bgColor = newColor;
+        }
+
+
+    </script>
+</body>
+
+</html>

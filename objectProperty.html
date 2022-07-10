@@ -15,10 +15,12 @@
     }
 
     div {
-        width: 60vw;
-        height: 50vh;
-        margin: auto;
+        width: 50vw;
+        height: 40vh;
+        margin: 55px auto;
         background-color: rgb(125, 65, 65);
+        border: solid;
+        border-radius: 15px;
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
@@ -26,9 +28,11 @@
 
     }
 
-    input {
-        height: 15%;
-        width: 20%;
+    input,
+    button {
+        /* height: 70px; */
+        width: 25%;
+        padding: 5px;
         margin: 0 auto;
         cursor: pointer;
         box-shadow: 3px 3px 5px;
@@ -39,22 +43,79 @@
         line-height: 1.5;
         color: yellow;
         border-radius: 15px;
+
     }
 
-    input:hover {
+    a {
+
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+
+    }
+
+    a:visited {
+        color: black;
+    }
+
+    button:hover {
         background-color: #457;
+    }
+
+    #urlText {
+        margin: 0 auto;
+        text-align: center;
+        color: yellowgreen;
+        font-size: 2rem;
+        height: 15vh;
+        border: solid black;
+        box-shadow: 3px 3px 5px black;
     }
 </style>
 
 <body>
     <div>
 
-        <input type="submit" value="Google" name="" id="">
-        <input type="submit" value="Youtube" name="" id="">
-        <input type="submit" value="Facebook" name="" id="">
+
+        <button>
+
+            <a href="https://facebook.com" name="Facebook" target="_blank" onclick="showLink(this)">Facebook</a>
+
+        </button>
+
+        <button>
+
+            <a href="https://Youtube.com" name="Youtube" target="_blank" onclick="showLink(this)"
+                name="Youtube">Youtube</a>
+
+        </button>
+
+        <button>
+
+            <a href="https://Google.com" name="Google" onclick="showLink(this)" target="_blank">Google</a>
+
+        </button>
+
+
 
     </div>
+
+    <div id="urlText">
+
+    </div>
+
+
+
+
+
     <script>
+        let urlText = document.getElementById("urlText");
+        function showLink(obj) {
+            urlText.innerText = obj.href
+        }
+
+
 
     </script>
 </body>
