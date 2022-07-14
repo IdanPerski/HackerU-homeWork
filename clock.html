@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300&display=swap" rel="stylesheet">
+
+    <title>Clock</title>
+    <style>
+        form {
+            font-family: 'Karantina', cursive;
+            width: 35vw;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            /* align-content: center; */
+            background-color: rgb(60, 17, 153);
+            margin: auto;
+            border: solid 3px;
+            box-shadow: 3px 5px 15px black;
+        }
+
+        input {
+            font-family: 'Karantina', cursive;
+            font-size: 4rem;
+            width: 60%;
+            margin: 0 auto;
+            ;
+            display: block;
+            color: rgb(150, 249, 249);
+            background-color: rgb(163, 42, 21);
+            text-align: center;
+            border: solid 3px black;
+            box-shadow: 3px 5px 15px black;
+
+        }
+
+        input[name="amPm"] {
+            width: 25%;
+            letter-spacing: 3.5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form name="forme">
+
+        <input type="text" name="clock">
+        <input type="text" name="amPm">
+    </form>
+
+    <script>
+        function runTime() {
+            var = time;
+            var watch = document.forme.clock;
+            var theTime = new Date();
+            var hr = theTime.getHours();
+
+            var mn = theTime.getMinutes();
+            if (mn < 10) {
+                mn = "0" + mn
+
+            };
+
+            var sc = theTime.getSeconds();
+            if (sc < 10) {
+                sc = "0" + sc
+
+            };
+
+            // function range(x, min, max) {
+            //     return x >= min && x <= max
+            // }
+
+            // var clockRange = range(hr, 0, 12)
+
+            // if (hr == 13) {
+            //     hr = 1
+            // }
+
+
+
+            function amPm() {
+                if (hr > 12) {
+
+                    hr = hr = 12
+                    document.forme.amPm.value = " PM";
+                }
+                else {
+                    document.forme.amPm.value = " AM"
+                }
+            }
+            amPm()
+
+
+
+
+            // var time = hr + ":" + mn + ":" + sc;
+
+
+            watch.value = time
+
+
+
+
+            setTimeout(runTime, 1000);
+
+
+        }
+        runTime();
+
+
+
+
+
+          // function amPm() {
+        //     if (hr >= 13) {
+
+        //         watch.value = time + " PM";
+
+
+        //     }
+        //     else {
+        //         watch.value = time + " AM"
+
+        //     }
+
+
+        // }
+        // 
+
+
+
+    </script>
+</body>
+
+</html>

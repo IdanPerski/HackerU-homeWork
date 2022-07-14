@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+
+<style>
+    form {
+        margin: 0 auto;
+        width: 50vw;
+        background-color: #569;
+        color: rgb(27, 27, 27);
+        font-size: 1.5rem;
+        padding: 30px 20px;
+        text-align: center;
+        font-family: Georgia;
+        border: solid black 2px;
+        box-shadow: 13px 8px 10px;
+    }
+
+
+
+    select {
+        width: 150px;
+        font-size: 1.5rem;
+        margin: 10px 25px;
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: crimson;
+        border: solid white 2px;
+    }
+
+    input {
+        display: block;
+        margin: 40px auto;
+        font-size: 1.2rem;
+        background-color: crimson;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    div {
+        color: rgb(255, 255, 22);
+        font-size: 2rem;
+        padding: 20px;
+        border: solid wheat;
+        text-align: center;
+        width: 30%;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+
+
+    <form name="forme">
+        <h1>
+            What we eat today?
+        </h1>
+
+        <label for="">Choose a day</label>
+        <select name="select_day" id="selectDay">
+            <option value="Sunday">Sunday</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wendsday">Wendsday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+        </select>
+        <input type="button" value="Click" onclick="menu()">
+
+        <div id="displayMenu">
+
+        </div>
+
+    </form>
+    <script>
+
+
+        function menu() {
+
+            var selectDay = document.getElementById("selectDay");
+            var displayMenu = document.getElementById("displayMenu");
+            switch (selectDay.value) {
+                case "Sunday":
+                    displayMenu.innerText = "Pizza"
+                    break;
+                case "Monday":
+                    displayMenu.innerText = "Soup"
+                    break;
+                case "Tuesday":
+                    displayMenu.innerText = "Kuskus"
+                    break;
+                case "Wendsday":
+                    displayMenu.innerText = "Falafel"
+                    break;
+                case "Thursday":
+                    displayMenu.innerText = "Fasulya"
+                    break;
+                case "Friday":
+                    displayMenu.innerText = "Shawarma"
+                    break;
+                case "Saturday":
+                    displayMenu.innerText = "Hamin"
+                    break;
+
+            }
+        }
+
+
+             // var userPassword = document.forme.password.value;
+            // switch (userPassword) {
+            //     case "1234":
+            //         document.location = "http://www.google.com";
+            //         break;
+            //     case "2345":
+            //         document.location = "http://www.youtube.com";
+            //         break;
+            //     case "6789":
+            //         document.location = " http://www.facebook.com";
+            //         break;
+            //     default:
+            //         document.location = " http://www.bing.com";
+
+            // }
+    </script>
+</body>
+
+</html>
