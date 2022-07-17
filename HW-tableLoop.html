@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for loop</title>
+</head>
+
+<body>
+
+    <form action="">
+        <label for="Happy_time">How many time you're Happy?</label>
+        <input type="text" name="Happy_time" id="HappyInput">
+        <input type="button" value="Happy Click!" id="happyClick" onclick="happyLoop()">
+    </form>
+
+    <script>
+
+        var HappyInput = document.getElementById("HappyInput");
+        var happyClick = document.getElementById("happyClick");
+        function happyLoop() {
+
+            document.write('<table border="2">');
+            document.write('<tr>');
+            for (var a = 1; a <= HappyInput.value; a = a + 1) {
+                document.write('<td>Happy</td>')
+
+            }
+            document.write('</tr>');
+            document.write('</table>');
+        }
+
+
+    </script>
+</body>
+
+</html>
